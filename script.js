@@ -5,6 +5,31 @@
 (function () {
   'use strict';
 
+  /* =========================================================
+     GOOGLE SHEET LEAD CAPTURE
+     Paste your deployed Apps Script Web App URL below.
+     It looks like: https://script.google.com/macros/s/XXXXXXXX/exec
+     ========================================================= */
+  var GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxn-cay70S-PiFNGnMtG0vwpw44JxXy0RFnIW-8G147JlnyBTIhqkjf-mJvWEAZPl8UEQ/exec';
+
+  function sendToGoogleSheet(dataObj) {
+    if (!GAS_WEB_APP_URL || GAS_WEB_APP_URL.indexOf('PASTE_YOUR') === 0) {
+      console.warn('Lakmé Academy: Google Sheet URL not set yet — lead was not saved to the sheet.');
+      return Promise.resolve();
+    }
+    var body = new URLSearchParams(dataObj);
+    // no-cors: Apps Script doesn't return CORS headers, so the response body
+    // can't be read from the browser — but the POST still reaches doPost()
+    // and the row still gets written to the sheet.
+    return fetch(GAS_WEB_APP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: body
+    }).catch(function (err) {
+      console.error('Lakmé Academy: could not reach Google Sheet endpoint', err);
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', init);
 
   function init() {
@@ -378,12 +403,25 @@
 
       var name = fields.name.el.value.trim();
       var phone = fields.phone.el.value.trim();
+      var email = fields.email.el.value.trim();
       var course = fields.course.el.value;
       var branch = fields.branch.el.value;
       var message = document.getElementById('fMessage').value.trim();
 
       showToast();
 
+      // 1) Save the lead to the Google Sheet (fire-and-forget).
+      sendToGoogleSheet({
+        name: name,
+        phone: phone,
+        email: email,
+        course: course,
+        branch: branch,
+        message: message,
+        source: 'Website Lead Form'
+      });
+
+      // 2) Hand off to WhatsApp so the enquiry also lands as a chat.
       var text = 'Hi, I would like to enquire about admissions.%0A' +
         'Name: ' + encodeURIComponent(name) + '%0A' +
         'Phone: ' + encodeURIComponent(phone) + '%0A' +
@@ -455,6 +493,17 @@
         }
         close();
         showToast();
+
+        sendToGoogleSheet({
+          name: name,
+          phone: phone,
+          email: '',
+          course: '',
+          branch: '',
+          message: 'Submitted via exit-intent popup',
+          source: 'Exit Intent Popup'
+        });
+
         var text = 'Hi, please call me back.%0AName: ' + encodeURIComponent(name) + '%0APhone: ' + encodeURIComponent(phone);
         setTimeout(function () {
           window.open('https://wa.me/919814155566?text=' + text, '_blank', 'noopener');
