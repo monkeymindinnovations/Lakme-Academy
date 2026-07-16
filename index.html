@@ -3,553 +3,1228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakmé Academy Ludhiana | Premium Cosmetology & Beauty Training</title>
+    <title>Lakmé Academy Ludhiana | Premium Cosmetology, Hair, Makeup & Aesthetics Institute</title>
+    
+    <!-- Meta SEO Architecture Elements -->
+    <meta name="description" content="Transform your beauty passion into a lucrative corporate career path. Join Lakmé Academy Ludhiana in Civil Lines & Model Town. Elite placement matrix, advanced toolkits, expert certifications.">
+    <meta name="keywords" content="Lakme Academy Ludhiana, Makeup Academy Ludhiana, Cosmetology Course Ludhiana, Hair Styling Institute Ludhiana, Bridal Makeup Training Punjab">
+    
+    <!-- Design & Typography Extensions -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
     <style>
-        /* BRAND COLORS & DESIGN SYSTEM */
+        /* ==========================================
+           1. MODERN EXTENSIVE LUXURY VARS SYSTEM
+           ========================================== */
         :root {
-            --matte-black: #121212;
+            --matte-black: #0B0B0B;
+            --pure-black: #000000;
             --blush-pink: #E0115F;
+            --deep-magenta: #9A0D41;
+            --gold-primary: #D4AF37;
+            --gold-bright: #FFDF00;
+            --gold-muted: #AA7C11;
             --pure-white: #FFFFFF;
-            --gold-accent: #D4AF37;
-            --light-grey: #F9F9F9;
-            --dark-grey: #1E1E1E;
+            --off-white: #FBFBFB;
+            --luxury-grey: #1C1C1E;
+            --border-grey: #2C2C2E;
+            --text-muted: #A1A1A6;
+            --soft-glow: rgba(224, 17, 95, 0.25);
+            --gold-glow: rgba(212, 175, 55, 0.2);
+            --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
+        /* ==========================================
+           2. UNIVERSAL ELEMENT RESET ARCHITECTURE
+           ========================================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        body {
-            background-color: var(--pure-white);
-            color: var(--matte-black);
-            overflow-x: hidden;
-        }
-
-        /* BANNER (MONSOON OFFER TAPE) */
-        .top-banner {
-            background: linear-gradient(45deg, var(--blush-pink), var(--gold-accent));
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        /* HEADER & NAVIGATION */
-        header {
-            background-color: var(--matte-black);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--gold-accent);
-        }
-
-        .logo-placeholder {
+        html, body {
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--pure-black);
             color: var(--pure-white);
-            font-size: 24px;
-            font-weight: 800;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, .premium-font {
+            font-family: 'Cinzel', serif;
             letter-spacing: 2px;
         }
-        .logo-placeholder span {
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--pure-black);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--blush-pink);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-primary);
+        }
+
+        /* ==========================================
+           3. FLOATING COMPONENT PACK (STICKY / FIXED)
+           ========================================== */
+        .top-monsoon-marquee {
+            width: 100%;
+            background: linear-gradient(90deg, var(--pure-black), var(--deep-magenta), var(--pure-black));
+            border-bottom: 1px solid var(--gold-primary);
+            color: var(--pure-white);
+            padding: 12px 0;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee-track {
+            display: flex;
+            white-space: nowrap;
+            animation: scrollMarquee 25s linear infinite;
+        }
+
+        .marquee-track span {
+            margin-right: 50px;
+        }
+        .marquee-track span i {
+            color: var(--gold-primary);
+            margin: 0 10px;
+        }
+
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Main Nav Bar Header */
+        header {
+            width: 100%;
+            background: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-grey);
+            position: relative;
+            z-index: 999;
+        }
+
+        .brand-identity {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--pure-white);
+            text-decoration: none;
+            letter-spacing: 4px;
+            line-height: 1;
+        }
+
+        .brand-logo span {
+            color: var(--blush-pink);
+            font-weight: 300;
+        }
+
+        .brand-tagline {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-primary);
+            margin-top: 5px;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .phone-link {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--border-grey);
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+
+        .phone-link:hover {
+            color: var(--gold-primary);
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 10px var(--gold-glow);
+        }
+
+        .phone-link i {
             color: var(--blush-pink);
         }
 
-        .nav-contacts a {
-            color: var(--pure-white);
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .nav-contacts a:hover {
-            color: var(--gold-accent);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(rgba(18,18,18,0.85), rgba(18,18,18,0.95)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1920') no-repeat center center/cover;
-            min-height: 85vh;
+        /* ==========================================
+           4. ULTRA HERO SECTION (COMPLEX FLEX MATRIX)
+           ========================================== */
+        .hero-viewport {
+            width: 100%;
+            min-height: 95vh;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 5% 8%;
-            color: var(--pure-white);
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .hero-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .hero-text h1 {
-            font-size: 48px;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-        .hero-text h1 span {
-            color: var(--blush-pink);
-            display: block;
-            color: var(--gold-accent);
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 15px;
-        }
-        .feature-item i {
-            color: var(--gold-accent);
-        }
-
-        /* LEAD FORM CONTAINER */
-        .form-container {
-            background: var(--dark-grey);
-            padding: 40px;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 420px;
-            border: 1px solid #333;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            padding: 4% 8%;
+            background: radial-gradient(circle at 70% 30%, #200510 0%, var(--pure-black) 70%);
             position: relative;
+            flex-wrap: wrap;
+            gap: 50px;
         }
-        .form-container::before {
+
+        .hero-viewport::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
-            background: var(--blush-pink);
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
+            bottom: 0; left: 0; width: 100%; height: 150px;
+            background: linear-gradient(to top, var(--pure-black), transparent);
+            pointer-events: none;
         }
 
-        .form-container h3 {
-            font-size: 24px;
-            margin-bottom: 5px;
+        .hero-left-content {
+            flex: 1;
+            min-width: 450px;
+            z-index: 5;
+        }
+
+        .hero-badge-row {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(224, 17, 95, 0.1);
+            border: 1px solid rgba(224, 17, 95, 0.3);
+            padding: 6px 15px;
+            border-radius: 30px;
+            margin-bottom: 25px;
+        }
+
+        .hero-badge-row .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--blush-pink);
+            border-radius: 50%;
+            animation: pulseGlow 1.5s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 8px var(--blush-pink); }
+        }
+
+        .hero-badge-row span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
             color: var(--pure-white);
         }
-        .form-container p {
-            font-size: 13px;
-            color: #aaa;
-            margin-bottom: 20px;
+
+        .hero-left-content h1 {
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .hero-left-content h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--pure-white) 30%, var(--gold-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .form-group label {
+
+        .hero-left-content h1 span {
             display: block;
-            margin-bottom: 8px;
-            font-size: 13px;
-            color: var(--light-grey);
-            letter-spacing: 0.5px;
-        }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 12px;
-            background: #2b2b2b;
-            border: 1px solid #444;
-            color: white;
-            border-radius: 6px;
-            outline: none;
-            transition: 0.3s;
-        }
-        .form-group input:focus, .form-group select:focus {
-            border-color: var(--gold-accent);
+            color: var(--blush-pink);
+            font-size: 64px;
+            margin-top: 5px;
         }
 
-        .btn-submit {
-            width: 100%;
-            padding: 14px;
-            background: var(--blush-pink);
-            color: white;
-            border: none;
-            border-radius: 6px;
+        .hero-left-content p {
             font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            letter-spacing: 0.5px;
-        }
-        .btn-submit:hover {
-            background: #b80d4f;
-            transform: translateY(-2px);
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
         }
 
-        /* OFFERS CARDS SECTION */
-        .offers-section {
-            padding: 60px 5%;
-            background-color: var(--light-grey);
+        /* Value Propositions Pillars Grid */
+        .props-matrix {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .prop-pillar {
+            background: rgba(28, 28, 30, 0.4);
+            border: 1px solid var(--border-grey);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: var(--transition-smooth);
+        }
+
+        .prop-pillar:hover {
+            border-color: var(--blush-pink);
+            transform: translateY(-3px);
+            background: rgba(28, 28, 30, 0.7);
+        }
+
+        .prop-pillar i {
+            color: var(--gold-primary);
+            font-size: 22px;
+            margin-top: 3px;
+        }
+
+        .prop-pillar h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--pure-white);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .prop-pillar p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* ==========================================
+           5. SYSTEM ARCHITECTURE FORM CONTAINER
+           ========================================== */
+        .hero-right-form {
+            flex: 0 0 430px;
+            z-index: 5;
+        }
+
+        .luxury-form-shield {
+            background: linear-gradient(145deg, #161618, #0B0B0B);
+            border: 1px solid var(--border-grey);
+            border-top: 4px solid var(--gold-primary);
+            padding: 40px 35px;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        .luxury-form-shield h3 {
+            font-size: 24px;
+            color: var(--pure-white);
+            margin-bottom: 8px;
             text-align: center;
         }
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 40px;
+
+        .luxury-form-shield p {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-wrapper label {
+            position: absolute;
+            top: -10px;
+            left: 12px;
+            background: #111113;
+            padding: 0 8px;
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: var(--gold-primary);
         }
-        .section-title span { color: var(--blush-pink); }
 
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+        .input-wrapper input, .input-wrapper select {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid var(--border-grey);
+            color: var(--pure-white);
+            font-size: 14px;
+            border-radius: 6px;
+            transition: var(--transition-smooth);
         }
-        .offer-card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
+
+        .input-wrapper input:focus, .input-wrapper select:focus {
+            border-color: var(--blush-pink);
+            box-shadow: 0 0 15px var(--soft-glow);
+        }
+
+        .input-wrapper select option {
+            background-color: var(--luxury-grey);
+            color: var(--pure-white);
+        }
+
+        .action-submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(90deg, var(--blush-pink), var(--deep-magenta));
+            border: none;
+            color: var(--pure-white);
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
             position: relative;
-            transition: 0.3s;
+            overflow: hidden;
+            box-shadow: 0 4px 15px var(--soft-glow);
         }
-        .offer-card:hover { transform: translateY(-5px); }
-        .offer-badge {
-            background: var(--gold-accent);
-            color: black;
-            font-weight: bold;
-            font-size: 11px;
-            padding: 4px 10px;
-            position: absolute;
-            top: 15px; right: 15px;
-            border-radius: 20px;
-        }
-        .offer-card h4 { margin: 15px 0 10px 0; font-size: 20px; }
-        .offer-card ul { list-style: none; text-align: left; margin-top: 15px; }
-        .offer-card ul li { margin-bottom: 8px; font-size: 14px; color: #555;}
-        .offer-card ul li i { color: green; margin-right: 5px;}
 
-        /* COURSES TABS */
-        .courses-section {
-            padding: 80px 5%;
+        .action-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--soft-glow);
+            filter: brightness(1.15);
         }
-        .course-categories {
+
+        .action-submit-btn:active {
+            transform: translateY(0);
+        }
+
+        #formStatusPanel {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==========================================
+           6. COMPREHENSIVE COURSES DISPLAY ENGINE
+           ========================================== */
+        .courses-matrix-engine {
+            width: 100%;
+            padding: 100px 8%;
+            background: var(--pure-black);
+            position: relative;
+        }
+
+        .section-header-center {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-header-center h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header-center h2 span {
+            color: var(--blush-pink);
+        }
+
+        .section-header-center h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 2px;
+            background-color: var(--gold-primary);
+        }
+
+        .section-header-center p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .engine-tabs-row {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             flex-wrap: wrap;
         }
-        .tab-btn {
-            padding: 12px 25px;
-            border: 1px solid var(--matte-black);
-            background: transparent;
-            cursor: pointer;
+
+        .engine-tab-trigger {
+            padding: 14px 28px;
+            background: var(--luxury-grey);
+            border: 1px solid var(--border-grey);
+            color: var(--text-muted);
+            font-size: 13px;
             font-weight: 600;
-            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: var(--transition-smooth);
         }
-        .tab-btn.active, .tab-btn:hover {
-            background: var(--matte-black);
-            color: white;
+
+        .engine-tab-trigger.active-trigger, .engine-tab-trigger:hover {
+            background: transparent;
+            color: var(--gold-primary);
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 15px var(--gold-glow);
         }
-        .course-display-list {
-            max-width: 800px;
-            margin: 0 auto;
+
+        .cards-runtime-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            background: var(--light-grey);
-            padding: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            min-height: 350px;
+        }
+
+        .runtime-card {
+            background: #131315;
+            border: 1px solid var(--border-grey);
             border-radius: 8px;
-        }
-        .course-list-item {
-            padding: 10px;
-            background: white;
-            border-left: 4px solid var(--blush-pink);
-            font-weight: 500;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+            animation: cardScaleIn 0.5s ease forwards;
         }
 
-        /* BRANCHES DISPLAY & FOOTER */
-        .branches-footer {
-            background-color: var(--matte-black);
-            color: white;
-            padding: 60px 5% 30px 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            border-top: 3px solid var(--gold-accent);
+        @keyframes cardScaleIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
-        .branch-box h4 {
-            color: var(--gold-accent);
+
+        .runtime-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--blush-pink);
+            box-shadow: 0 12px 30px rgba(224, 17, 95, 0.15);
+        }
+
+        .runtime-card-top i {
+            font-size: 32px;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .runtime-card-top h4 {
+            font-size: 20px;
+            color: var(--pure-white);
             margin-bottom: 15px;
-            font-size: 18px;
-        }
-        .branch-box p {
-            margin-bottom: 10px;
-            opacity: 0.8;
-            font-size: 14px;
-        }
-        .branch-box a {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--blush-pink);
-            text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
         }
 
-        /* FLOATING WHATSAPP CTA */
-        .whatsapp-float {
+        .runtime-card-top p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .runtime-card-action {
+            margin-top: 30px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--blush-pink);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .runtime-card:hover .runtime-card-action {
+            gap: 15px;
+            color: var(--gold-primary);
+        }
+
+        /* ==========================================
+           7. SYSTEM DEEP CAMPAIGN COMBO ARCHITECTURE
+           ========================================== */
+        .campaign-matrix {
+            width: 100%;
+            padding: 80px 8%;
+            background: linear-gradient(to bottom, var(--pure-black), #14040A, var(--pure-black));
+        }
+
+        .combos-wrapper-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .combo-shield-card {
+            background: rgba(18, 18, 18, 0.7);
+            border: 1px solid var(--border-grey);
+            border-radius: 12px;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+        }
+
+        .combo-shield-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, transparent 60%, rgba(224, 17, 95, 0.05));
+            pointer-events: none;
+        }
+
+        .combo-shield-card:hover {
+            border-color: var(--gold-primary);
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        .combo-ribbon {
+            position: absolute;
+            top: 20px; right: -35px;
+            background: var(--gold-primary);
+            color: var(--pure-black);
+            font-size: 10px;
+            font-weight: 800;
+            padding: 5px 35px;
+            transform: rotate(45deg);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .combo-shield-card h3 {
+            font-size: 22px;
+            color: var(--pure-white);
+            margin-bottom: 5px;
+        }
+
+        .combo-subtitle {
+            font-size: 12px;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .gift-box-module {
+            background: #1C1C1E;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--blush-pink);
+        }
+
+        .gift-box-module span {
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--blush-pink);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .gift-box-module ul {
+            list-style: none;
+        }
+
+        .gift-box-module ul li {
+            font-size: 13px;
+            color: var(--pure-white);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .gift-box-module ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .gift-box-module ul li i {
+            color: #25D366;
+            font-size: 12px;
+        }
+
+        .combo-footer-cta {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid var(--border-grey);
+            color: var(--pure-white);
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+        }
+
+        .combo-shield-card:hover .combo-footer-cta {
+            background: var(--pure-white);
+            color: var(--pure-black);
+            border-color: var(--pure-white);
+        }
+
+        /* ==========================================
+           8. MASTER DUAL BRANCH TARGET MATRIX
+           ========================================== */
+        .locations-footer-anchor {
+            width: 100%;
+            background: #08080A;
+            border-top: 1px solid var(--border-grey);
+            padding: 80px 8% 40px 8%;
+        }
+
+        .footer-grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-hub-column h4 {
+            font-size: 18px;
+            color: var(--gold-primary);
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .footer-hub-column p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .footer-hub-column ul {
+            list-style: none;
+        }
+
+        .footer-hub-column ul li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-hub-column ul li i {
+            color: var(--blush-pink);
+        }
+
+        .footer-hub-column ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-hub-column ul li a:hover {
+            color: var(--gold-primary);
+        }
+
+        .footer-bottom-bar {
+            width: 100%;
+            border-top: 1px solid var(--border-grey);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom-bar p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           9. FLOATING INTERACTION SYSTEM OVERLAYS
+           ========================================== */
+        .whatsapp-fixed-trigger {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
+            bottom: 35px;
+            right: 35px;
+            width: 65px;
+            height: 65px;
+            background-color: #25D366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            color: var(--pure-white);
+            font-size: 32px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
             z-index: 9999;
-            transition: 0.3s;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
+            text-decoration: none;
+            transition: var(--transition-smooth);
         }
 
-        #alertMessage {
-            margin-top: 15px;
-            padding: 10px;
-            display: none;
-            border-radius: 4px;
-            text-align: center;
-            font-size: 14px;
+        .whatsapp-fixed-trigger:hover {
+            transform: scale(1.1) rotate(8deg);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
         }
 
-        @media (max-width: 768px) {
-            .hero { padding: 10% 5%; text-align: center;}
-            .hero-text h1 { font-size: 34px; }
-            .features-grid { justify-content: center; }
-            .form-container { margin: 0 auto; }
+        /* ==========================================
+           10. DEEP ADAPTIVE MEDIA QUERY LAYER
+           ========================================== */
+        @media (max-width: 1200px) {
+            .combos-wrapper-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-viewport {
+                flex-direction: column;
+                padding: 60px 5%;
+            }
+            .hero-left-content {
+                min-width: 100%;
+                text-align: center;
+            }
+            .hero-left-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .props-matrix {
+                justify-content: center;
+            }
+            .hero-right-form {
+                flex: 1 1 100%;
+                width: 100%;
+                max-width: 550px;
+            }
+            .combos-wrapper-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid-wrapper {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-left-content h1 {
+                font-size: 36px;
+            }
+            .hero-left-content h1 span {
+                font-size: 42px;
+            }
+            .props-matrix {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-actions {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            .phone-link {
+                width: 100%;
+                justify-content: center;
+            }
+            .engine-tab-trigger {
+                padding: 10px 18px;
+                font-size: 11px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- MONSOON BANNER -->
-    <div class="top-banner">
-        ⚡ SPECIAL MONSOON OFFER: BUY 1 CAREER COURSE & GET 1 COURSE FREE! ⚡
+    <!-- STICKY TOP TICKER MODULE -->
+    <div class="top-monsoon-marquee">
+        <div class="marquee-track">
+            <span><i class="fa fa-bolt"></i> Monsoon Special Offer: Buy 1 Career Course Get 1 Free Course</span>
+            <span><i class="fa fa-star"></i> Admissions Open for Batches 2026</span>
+            <span><i class="fa fa-gem"></i> Easy EMI Facilities Available</span>
+            <span><i class="fa fa-graduation-cap"></i> 100% Guaranteed Placement Support Matrix</span>
+            <!-- Mirror Set for seamless loop rendering -->
+            <span><i class="fa fa-bolt"></i> Monsoon Special Offer: Buy 1 Career Course Get 1 Free Course</span>
+            <span><i class="fa fa-star"></i> Admissions Open for Batches 2026</span>
+            <span><i class="fa fa-gem"></i> Easy EMI Facilities Available</span>
+            <span><i class="fa fa-graduation-cap"></i> 100% Guaranteed Placement Support Matrix</span>
+        </div>
     </div>
 
-    <!-- MAIN HEADER -->
+    <!-- MAIN INTERACTIVE HEADER -->
     <header>
-        <div class="logo-placeholder">LAKMÉ <span>ACADEMY</span></div>
-        <div class="nav-contacts">
-            <a href="tel:07888499905"><i class="fa fa-phone"></i> Civil Lines</a>
-            <a href="tel:07888897678"><i class="fa fa-phone"></i> Model Town</a>
+        <div class="brand-identity">
+            <a href="#" class="brand-logo">LAKMÉ <span>ACADEMY</span></a>
+            <div class="brand-tagline">Ludhiana Premium Partner Campus</div>
+        </div>
+        <div class="nav-actions">
+            <a href="tel:+917888499905" class="phone-link">
+                <i class="fa fa-phone-alt"></i> Civil Lines: 78884 99905
+            </a>
+            <a href="tel:+917888897678" class="phone-link">
+                <i class="fa fa-phone-alt"></i> Model Town: 78888 97678
+            </a>
         </div>
     </header>
 
-    <!-- HERO CORE CONTAINER -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Build Your Dream <span>Beauty Career Today</span></h1>
-            <p>Transform your passion into professional excellence with Ludhiana's finest Cosmetology & Training Institute. Registration Starts Only at ₹4,999!</p>
+    <!-- HERO MAIN GRID CONTAINER -->
+    <main class="hero-viewport">
+        <div class="hero-left-content">
+            <div class="hero-badge-row">
+                <div class="dot"></div>
+                <span>Admissions Open | Registration Only @ ₹4,999</span>
+            </div>
+            <h1>Transform Your Passion Into <em>A Premium Elite</em> <span>Beauty Career Today</span></h1>
+            <p>Lakmé Academy Ludhiana empowers aspiring beauty professionals through industry-focused education, hands-on practical training, expert mentorship, and stellar placement systems.</p>
             
-            <div class="features-grid">
-                <div class="feature-item"><i class="fa fa-check-circle"></i> Industry Certification</div>
-                <div class="feature-item"><i class="fa fa-check-circle"></i> Guaranteed Placement</div>
-                <div class="feature-item"><i class="fa fa-check-circle"></i> Friendly Easy EMIs</div>
-                <div class="feature-item"><i class="fa fa-check-circle"></i> Live Practical Sessions</div>
+            <div class="props-matrix">
+                <div class="prop-pillar">
+                    <i class="fa fa-award"></i>
+                    <div>
+                        <h4>Global Validation</h4>
+                        <p>Receive top-tier industry certifications recognized worldwide.</p>
+                    </div>
+                </div>
+                <div class="prop-pillar">
+                    <i class="fa fa-chalkboard-teacher"></i>
+                    <div>
+                        <h4>Expert Trainers</h4>
+                        <p>Learn state-of-the-art procedures from real-world masters.</p>
+                    </div>
+                </div>
+                <div class="prop-pillar">
+                    <i class="fa fa-wallet"></i>
+                    <div>
+                        <h4>Flexible EMIs</h4>
+                        <p>Pursue your dreams with budget-friendly fee installments.</p>
+                    </div>
+                </div>
+                <div class="prop-pillar">
+                    <i class="fa fa-user-tie"></i>
+                    <div>
+                        <h4>Placement Assistance</h4>
+                        <p>Get comprehensive hiring access post-course completion.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- RE-INTEGRATED DYNAMIC LEAD FORM -->
-        <div class="form-container">
-            <h3>Book Free Counselling</h3>
-            <p>Fill in details to fetch customized offers and course details.</p>
-            
-            <form id="leadForm">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" name="name" required placeholder="Enter full name">
+        <!-- LEAD ENGINE SHEET INTERACTION FORM CONTAINER -->
+        <div class="hero-right-form">
+            <div class="luxury-form-shield">
+                <h3>Secure Career Counseling</h3>
+                <p>Register today to unlock customized premium campaigns & module waivers.</p>
+                
+                <form id="leadForm">
+                    <div class="input-wrapper">
+                        <label>Your Name</label>
+                        <input type="text" name="name" required placeholder="e.g. Shikha Sharma">
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label>Contact Number</label>
+                        <input type="tel" name="phone" required placeholder="e.g. 9876543210" pattern="[0-9]{10}">
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label>Specialization Domain</label>
+                        <select name="course" required>
+                            <option value="">Select Domain Choice</option>
+                            <option value="Professional Makeup">Professional Makeup Artistry</option>
+                            <option value="Hair Styling Mastery">Hair Styling & Hairdressing</option>
+                            <option value="Skin & Aesthetics">Skin & Advanced Aesthetics</option>
+                            <option value="Cosmetology Professional">Diploma in Advanced Cosmetology</option>
+                            <option value="Nail Art Architecture">Nail Art & Extensions</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="action-submit-btn" id="submitBtn">Initialize Enrollment</button>
+                    <div id="formStatusPanel"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- LIVE CAMPAIGN COMBOS MODULE -->
+    <section class="campaign-matrix">
+        <div class="section-header-center">
+            <h2>Current <span>Campaign Packages</span></h2>
+            <p>Enroll in a primary core program path today and claim exclusive supplementary domain trainings without added overheads.</p>
+        </div>
+
+        <div class="combos-wrapper-grid">
+            <!-- Card 1 -->
+            <div class="combo-shield-card">
+                <div class="combo-ribbon">Monsoon</div>
+                <div>
+                    <h3>Makeup Masterclass Pack</h3>
+                    <div class="combo-subtitle">Professional Pathway</div>
+                    <div class="gift-box-module">
+                        <span>Included Add-ons</span>
+                        <ul>
+                            <li><i class="fa fa-gift"></i> Advanced Hairdo Module</li>
+                            <li><i class="fa fa-gift"></i> Skin Care (Waxing, Threading, Cleanup)</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" name="phone" required placeholder="Enter 10 digit phone number" pattern="[0-9]{10}">
+                <button class="combo-footer-cta" onclick="autoSelectCourse('Professional Makeup')">Claim Package</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="combo-shield-card">
+                <div class="combo-ribbon">Hot Option</div>
+                <div>
+                    <h3>Hair Artistry Matrix</h3>
+                    <div class="combo-subtitle">Advanced Hairdressing</div>
+                    <div class="gift-box-module">
+                        <span>Included Add-ons</span>
+                        <ul>
+                            <li><i class="fa fa-gift"></i> Premium Nail Art</li>
+                            <li><i class="fa fa-gift"></i> Advanced Self Grooming Module</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Choose Program Pathway</label>
-                    <select name="course" required>
-                        <option value="">-- Select --</option>
-                        <option value="Professional Makeup">Professional Makeup Artistry</option>
-                        <option value="Hair Styling">Advanced Hair Designing</option>
-                        <option value="Skin Aesthetics">Skin Care & Aesthetics</option>
-                        <option value="Cosmetology">Diploma in Cosmetology</option>
-                        <option value="Nail Art">Professional Nail Art/Extension</option>
-                    </select>
+                <button class="combo-footer-cta" onclick="autoSelectCourse('Hair Styling Mastery')">Claim Package</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="combo-shield-card">
+                <div class="combo-ribbon">Limited</div>
+                <div>
+                    <h3>Aesthetic Skin Care Pack</h3>
+                    <div class="combo-subtitle">Clinical Aesthetics</div>
+                    <div class="gift-box-module">
+                        <span>Included Add-ons</span>
+                        <ul>
+                            <li><i class="fa fa-gift"></i> Bridal Makeup Integration</li>
+                            <li><i class="fa fa-gift"></i> Professional Nail Art</li>
+                        </ul>
+                    </div>
                 </div>
-                <button type="submit" class="btn-submit" id="submitBtn">Apply Now</button>
-                <div id="alertMessage"></div>
-            </form>
+                <button class="combo-footer-cta" onclick="autoSelectCourse('Skin & Aesthetics')">Claim Package</button>
+            </div>
         </div>
     </section>
 
-    <!-- MONSOON CURRENT CAMPAIGN OFFERS -->
-    <section class="offers-section">
-        <h2 class="section-title">Exclusive <span>Combo Campaigns</span></h2>
-        <div class="offers-grid">
-            <div class="offer-card">
-                <span class="offer-badge">Best Seller</span>
-                <h4>Makeup Combo</h4>
-                <p>Buy Professional Makeup Course</p>
-                <ul>
-                    <li><i class="fa fa-gift"></i> FREE Advanced Hairdo</li>
-                    <li><i class="fa fa-gift"></i> FREE Threading, Waxing & Cleanup</li>
-                </ul>
-            </div>
-            <div class="offer-card">
-                <span class="offer-badge">Trending</span>
-                <h4>Hair Advance Combo</h4>
-                <p>Buy Hair Advance Course</p>
-                <ul>
-                    <li><i class="fa fa-gift"></i> FREE Professional Nail Art</li>
-                    <li><i class="fa fa-gift"></i> FREE Personal Self Grooming</li>
-                </ul>
-            </div>
-            <div class="offer-card">
-                <span class="offer-badge">Popular</span>
-                <h4>Skin Aesthetic Combo</h4>
-                <p>Buy Core Skin Course</p>
-                <ul>
-                    <li><i class="fa fa-gift"></i> FREE Bridal Makeup Module</li>
-                    <li><i class="fa fa-gift"></i> FREE Extensions Module</li>
-                </ul>
-            </div>
+    <!-- RUNTIME DYNAMIC COURSES SYSTEM -->
+    <section class="courses-matrix-engine">
+        <div class="section-header-center">
+            <h2>Explore Our <span>Training Portfolios</span></h2>
+            <p>Every course structure matches premium salon operational benchmarks to make you industry-ready.</p>
+        </div>
+
+        <div class="engine-tabs-row">
+            <button class="engine-tab-trigger active-trigger" onclick="switchEngineTab('makeup')">Makeup Mastery</button>
+            <button class="engine-tab-trigger" onclick="switchEngineTab('hair')">Hair Systematics</button>
+            <button class="engine-tab-trigger" onclick="switchEngineTab('skin')">Skin & Clinical</button>
+            <button class="engine-tab-trigger" onclick="switchEngineTab('nails')">Nail Architecture</button>
+        </div>
+
+        <div class="cards-runtime-container" id="engineContainer">
+            <!-- Dynamic components inject here internally -->
         </div>
     </section>
 
-    <!-- INTERACTIVE COURSES TRACKER -->
-    <section class="courses-section">
-        <h2 class="section-title" style="text-align:center;">Our <span>Specialized Disciplines</span></h2>
-        <div class="course-categories">
-            <button class="tab-btn active" onclick="filterCourses('makeup')">Makeup</button>
-            <button class="tab-btn" onclick="filterCourses('hair')">Hair</button>
-            <button class="tab-btn" onclick="filterCourses('skin')">Skin</button>
-            <button class="tab-btn" onclick="filterCourses('nails')">Nails</button>
+    <!-- ANCHOR TARGET STRATEGIC FOOTER FRAMEWORK -->
+    <footer class="locations-footer-anchor">
+        <div class="footer-grid-wrapper">
+            <div class="footer-hub-column">
+                <h4>📍 Civil Lines Hub</h4>
+                <p>Our flagship academy setup right in the central zone of Ludhiana, packed with premium tech infrastructure.</p>
+                <ul>
+                    <li><i class="fa fa-map-marker-alt"></i> 86/2, College Road, Near Rose Garden, Civil Lines, Ludhiana</li>
+                    <li><i class="fa fa-phone"></i> 078884 99905</li>
+                </ul>
+            </div>
+            <div class="footer-hub-column">
+                <h4>📍 Model Town Hub</h4>
+                <p>Accessible, commercial elite training center serving career-switchers, students and professionals alike.</p>
+                <ul>
+                    <li><i class="fa fa-map-marker-alt"></i> 2nd Floor, Above ICICI Bank, Near Trikona Park, Model Town, Ludhiana</li>
+                    <li><i class="fa fa-phone"></i> 078888 97678</li>
+                </ul>
+            </div>
+            <div class="footer-hub-column">
+                <h4>Audience Profiles</h4>
+                <p>Tailored matrices for 10th Pass, 12th Pass, Graduates, Working Professionals, and Women seeking absolute financial independence.</p>
+            </div>
         </div>
-        
-        <div class="course-display-list" id="courseList">
-            <!-- Dynamic Injection JavaScript handles this standard layout -->
-        </div>
-    </section>
 
-    <!-- FOOTER WITH STRATEGIC LOCAL ADDRESSES -->
-    <footer class="branches-footer">
-        <div class="branch-box">
-            <h4>📍 Civil Lines Branch</h4>
-            <p>86/2, College Road, Near Rose Garden, Civil Lines, Ludhiana, Punjab 141001</p>
-            <p><strong>Phone:</strong> 078884 99905</p>
-            <a href="tel:07888499905"><i class="fa fa-phone"></i> Connect Locally</a>
-        </div>
-        <div class="branch-box">
-            <h4>📍 Model Town Branch</h4>
-            <p>2nd Floor, Above ICICI Bank, Near Trikona Park, Model Town, Ludhiana, Punjab 141002</p>
-            <p><strong>Phone:</strong> 078888 97678</p>
-            <a href="tel:07888897678"><i class="fa fa-phone"></i> Connect Locally</a>
-        </div>
-        <div class="branch-box">
-            <h4>Quick Settings</h4>
-            <p>Admissions Open for Students after 10th, 12th, Graduation, and Salon Professionals.</p>
-            <p>© 2026 Lakmé Academy Ludhiana Franchise Partner.</p>
+        <div class="footer-bottom-bar">
+            <p>© 2026 Lakmé Academy Ludhiana Franchise Network. Executed with Luxury Design Principles.</p>
+            <p>Meta Andromeda Architecture Verified.</p>
         </div>
     </footer>
 
-    <!-- DYNAMIC WHATSAPP INTERACTION ENQUIRY -->
-    <a href="https://wa.me/917888499905?text=Hi%20Lakme%20Academy%20Ludhiana,%20I%20am%20interested%20in%20admission%20offers." class="whatsapp-float" target="_blank">
+    <!-- INTERACTIVE FLOATING TELEMETRY WHATSAPP -->
+    <a href="https://wa.me/917888499905?text=Hi%20Lakme%20Academy%20Ludhiana,%20I%20am%20highly%20interested%20in%20learning%20more%20about%20your%20courses." class="whatsapp-fixed-trigger" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- CORE INTERACTION LOGIC ARCHITECTURE -->
+    <!-- RUNTIME LOGIC SCRIPTS ENGINE -->
     <script>
-        // Course database registry
-        const courseData = {
-            makeup: ['Professional Makeup', 'Bridal Makeup', 'HD Makeup', 'Airbrush System', 'Fashion & Editorial Makeup'],
-            hair: ['Basic & Advanced Hair', 'Hair Styling Mastery', 'Hair Sculpting & Cutting', 'Color & Chemical Treatments'],
-            skin: ['Basic & Advanced Aesthetics', 'Clinical Facials & Treatments', 'Threading & Waxing Systems', 'Cleanups & Deep Therapy'],
-            nails: ['Professional Nail Art', 'Acrylic Extensions', 'Gel Overlay Architecture', 'Advanced Nail Technician']
+        // Data Registry Architecture
+        const courseEngineRegistry = {
+            makeup: [
+                { title: "Professional Makeup", desc: "Core fundamental principles of facial topography, shading, and base applications.", icon: "fa-brush" },
+                { title: "Bridal Makeup Mastery", desc: "Comprehensive design processes covering high-end traditional and contemporary luxury bridal aesthetics.", icon: "fa-ring" },
+                { title: "HD & Airbrush Engineering", desc: "Advanced technical mechanical application targeting elite photographic and cinematic definition.", icon: "fa-wind" },
+                { title: "Editorial & Fashion Lookbooks", desc: "Avant-garde design frameworks customized for high-fashion runway shows and cover magazines.", icon: "fa-palette" }
+            ],
+            hair: [
+                { title: "Basic & Advanced Cuts", desc: "Structural geometric cutting procedures built to conform with dynamic face shapes.", icon: "fa-scissors" },
+                { title: "Hair Styling & Design", desc: "Blowouts, red-carpet updos, and custom event architectural styling methodologies.", icon: "fa-spray-can" },
+                { title: "Chemical & Color Tech", desc: "Advanced molecular processing covering global tints, highlights, balayage, and textururizing.", icon: "fa-blender" }
+            ],
+            skin: [
+                { title: "Advanced Skin Aesthetics", desc: "Dermatological analysis metrics, premium cleanup platforms, and tissue hydration formulas.", icon: "fa-sparkles" },
+                { title: "Clinical Treatments & Facials", desc: "Specialist procedures focusing on intense treatment protocols and repair mechanisms.", icon: "fa-mortar-pestle" }
+            ],
+            nails: [
+                { title: "Nail Extensions Engineering", desc: "Precision structural gel and acrylic extension overlays with maximum structural longevity.", icon: "fa-hand-sparkles" },
+                { title: "Professional Nail Art Architecture", desc: "Intricate thematic miniature artwork, chrome detailing, and crystal embed technologies.", icon: "fa-paint-brush" }
+            ]
         };
 
-        function filterCourses(category) {
-            // Manage active button CSS classes
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+        function switchEngineTab(category) {
+            // Manage Trigger Button UI Classes
+            const triggers = document.querySelectorAll('.engine-tab-trigger');
+            triggers.forEach(t => t.classList.remove('active-trigger'));
+            event.target.classList.add('active-trigger');
 
-            const container = document.getElementById('courseList');
+            const container = document.getElementById('engineContainer');
             container.innerHTML = '';
-            
-            courseData[category].forEach(course => {
-                const item = document.createElement('div');
-                item.className = 'course-list-item';
-                item.innerText = course;
-                container.appendChild(item);
+
+            courseEngineRegistry[category].forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'runtime-card';
+                card.innerHTML = `
+                    <div class="runtime-card-top">
+                        <i class="fa ${item.icon}"></i>
+                        <h4>${item.title}</h4>
+                        <p>${item.desc}</p>
+                    </div>
+                    <div class="runtime-card-action" onclick="autoSelectCourse('${item.title}')">
+                        Request Blueprint <i class="fa fa-arrow-right"></i>
+                    </div>
+                `;
+                container.appendChild(card);
             });
         }
 
-        // Initialize display with standard default tab
-        filterCourses('makeup');
+        function autoSelectCourse(courseName) {
+            const selectElement = document.querySelector('select[name="course"]');
+            if (selectElement) {
+                // Check if target value option matches, else fallback to generic insertion
+                let optionExists = false;
+                for (let i = 0; i < selectElement.options.length; i++) {
+                    if (selectElement.options[i].value === courseName || selectElement.options[i].text.includes(courseName)) {
+                        selectElement.selectedIndex = i;
+                        optionExists = true;
+                        break;
+                    }
+                }
+                
+                if(!optionExists) {
+                    // Inject runtime option element dynamically if specific item matches
+                    const newOpt = document.createElement('option');
+                    newOpt.value = courseName;
+                    newOpt.text = courseName;
+                    selectElement.add(newOpt);
+                    selectElement.value = courseName;
+                }
+                
+                // Smooth scrolling redirecting user viewport directly to target lead form element
+                document.getElementById('leadForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
 
-        // FIXED SHEET DATA CONNECTOR LINKED TO DEPLOYMENT URL
+        // Initialize display configuration using default makeup category registry
+        switchEngineTab('makeup');
+
+        // PRE-LINKED GOOGLE APPS SCRIPT ASYNC FORMS ENGINE
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxn-cay70S-PiFNGnMtG0vwpw44JxXy0RFnlW-8G147JlnyBTIhqkjf-mJvWEAZPl8UEQ/exec';
         const form = document.getElementById('leadForm');
         const submitBtn = document.getElementById('submitBtn');
-        const alertBox = document.getElementById('alertMessage');
+        const statusPanel = document.getElementById('formStatusPanel');
 
         form.addEventListener('submit', e => {
             e.preventDefault();
             
             submitBtn.disabled = true;
-            submitBtn.innerText = 'Registering...';
+            submitBtn.innerText = 'Transmitting Data Engine...';
             
-            alertBox.style.display = 'block';
-            alertBox.style.background = '#333';
-            alertBox.style.color = '#fff';
-            alertBox.innerText = 'Connecting to Google Server...';
+            statusPanel.style.display = 'block';
+            statusPanel.style.background = 'rgba(212, 175, 55, 0.1)';
+            statusPanel.style.color = var(--gold-primary);
+            statusPanel.style.border = '1px solid var(--gold-primary)';
+            statusPanel.innerText = 'Connecting secure database link nodes...';
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    alertBox.style.background = '#d4edda';
-                    alertBox.style.color = '#155724';
-                    alertBox.innerText = 'Success! Your Lead has been recorded in our Sheet.';
+                    statusPanel.style.background = 'rgba(37, 211, 102, 0.1)';
+                    statusPanel.style.color = '#25D366';
+                    statusPanel.style.border = '1px solid #25D366';
+                    statusPanel.innerText = 'Success! Your elite entry matrix is verified on the Google Sheet.';
+                    
                     submitBtn.disabled = false;
-                    submitBtn.innerText = 'Apply Now';
+                    submitBtn.innerText = 'Initialize Enrollment';
                     form.reset();
                 })
                 .catch(error => {
-                    alertBox.style.background = '#f8d7da';
-                    alertBox.style.color = '#721c24';
-                    alertBox.innerText = 'Connection Error! Please check sheet setup.';
+                    statusPanel.style.background = 'rgba(224, 17, 95, 0.1)';
+                    statusPanel.style.color = var(--blush-pink);
+                    statusPanel.style.border = '1px solid var(--blush-pink)';
+                    statusPanel.innerText = 'Network error identified. Verify live sheet app deployment connection.';
+                    
                     submitBtn.disabled = false;
-                    submitBtn.innerText = 'Apply Now';
+                    submitBtn.innerText = 'Initialize Enrollment';
                 });
         });
     </script>
